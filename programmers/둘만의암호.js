@@ -16,6 +16,7 @@ function solution(s, skip, index) {
         if (newCharCode > 'z'.charCodeAt(0)) {
             newCharCode = newCharCode - 26;
         }
+        
         let newChar = String.fromCharCode(newCharCode);
 
         answer = answer + newChar;
@@ -23,4 +24,4 @@ function solution(s, skip, index) {
     return answer;
 }
 
-console.log(solution('u','wbqd',5))
+console.log(solution('zzzz','wbqd', 5))
