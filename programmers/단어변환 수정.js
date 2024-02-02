@@ -3,7 +3,7 @@ function solution(begin, target, words) {
     if (!words.includes(target)) return answer = 0;
     answer = dfs(begin, 0);
     
-    
+    //백트래킹
     function dfs(now, cnt) {
         if (now === target) {
             return cnt
