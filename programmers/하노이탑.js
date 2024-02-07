@@ -8,7 +8,7 @@ function solution(n) {
     hanoi(num-1, from, other, to);
     answer.push([from,to])    
     hanoi(num-1, other, to, from);
-
+    //
    }
 
     return answer;
