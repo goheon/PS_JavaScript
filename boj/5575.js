@@ -1,4 +1,8 @@
-const input = require("fs").readFileSync("input.txt").toString().split("\n");
+const input = require("fs")
+  .readFileSync("input.txt")
+  .trim()
+  .toString()
+  .split("\n");
 
 const func = (inH, inM, inS, outH, outM, outS) => {
   let resultS, resultM, resultH;
