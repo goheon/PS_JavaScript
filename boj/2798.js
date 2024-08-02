@@ -19,10 +19,10 @@ for (let i = 0; i < N - 2; i++) {
     for (let k = j + 1; k < N; k++) {
       const z = nums[k];
       let sum = x + y + z;
-      let diff = M - sum;
-      if (sum <= M && Math.abs(diff) < diff) {
-        console.log(sum, M, diff);
+      let diff2 = M - sum;
+      if (sum <= M && diff2 <= diff) {
         max = sum;
+        diff = diff2;
       }
     }
   }
