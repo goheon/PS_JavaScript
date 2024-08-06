@@ -27,26 +27,31 @@ for (i in sortedCards) {
   arr.push([temp, cnt]);
 }
 
-console.log(arr);
-const result = [];
-for (const num of Nums) {
+const nNums = Nums.split(" ").map(Number);
+let result = [];
+
+for (let i = 0; i < M; i++) {
   let left = 0;
   let right = arr.length - 1;
-  let count = 0;
+  let target = nNums[i];
+  let flag = false;
 
   while (left <= right) {
-    const mid = Math.floor((left + right) / 2);
-    if (arr[mid][0] === num) {
-      count = arr[mid][1];
+    let mid = Math.floor((left + right) / 2);
+    if (arr[mid][0] == target) {
+      result.push(arr[mid][1]);
+      flag = true;
       break;
-    } else if (arr[mid][0] < num) {
+    } else if (arr[mid][0] < target) {
       left = mid + 1;
     } else {
       right = mid - 1;
     }
   }
 
-  result.push(count);
+  if (!flag) {
+    result.push(0);
+  }
 }
 
-console.log(result);
+console.log(result.join(" "));
